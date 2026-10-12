@@ -1,6 +1,6 @@
 # Roadmap
 
-> **Shipped:** [agentwatch](https://github.com/agentsec-ecosystem/agentwatch) **v0.2.0** — the telemetry +
+> **Shipped:** [agentwatch](https://github.com/agentic-suite/agentwatch) **v0.2.0** — the telemetry +
 > security-event layer is released. Wave 0's remaining tools (agentpolicy, agentkeys, agenthalt, agentdrill)
 > are in progress.
 
@@ -26,7 +26,7 @@ default). Shipped as **one** install, not five launches.
 - **agentkeys v0.1** — never-in-context credential broker + one-command revoke
 - **agenthalt v0.1** — halt/pause across layers + evidence snapshot
 - **agentdrill v0.1** — attack packs that gate the rest
-- **One install:** `npx @agentsec-ecosystem/cli init` (monitor-only by default)
+- **One install:** `npx @agentic-suite/cli init` (monitor-only by default)
 
 **Exit gate:** all four capabilities running on Claude Code in ≤15 min, zero code changes, and the
 three demos (Replit gate, poisoned-tool block, kill-switch) reproducible from the README.

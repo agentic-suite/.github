@@ -5,7 +5,7 @@ rights to the project's names, logos, or branding.
 
 ## The marks
 
-The ecosystem brand (currently "agentsec-ecosystem", including any successor brand), and the names
+The ecosystem brand (currently "agentic-suite", including any successor brand), and the names
 and logos of the tools in this organization (together, "the Marks"), are trademarks of the project
 owner.
 
@@ -28,7 +28,7 @@ Forks must be clearly renamed and must not use the Marks, except to state their 
 
 ## Reporting misuse
 
-Open an issue in [`.github`](https://github.com/agentsec-ecosystem/.github) or contact the
+Open an issue in [`.github`](https://github.com/agentic-suite/.github) or contact the
 maintainers.
 
 ---

@@ -26,7 +26,7 @@ contact you privately — do not include the vulnerability details in it.
 
 ## Scope
 
-This policy covers repositories in the `agentsec-ecosystem` organization. Because this project
+This policy covers repositories in the `agentic-suite` organization. Because this project
 sits in the security path of other tools, we take reports about bypasses, policy-evasion,
 credential exposure, and enforcement failures as especially high priority.
 

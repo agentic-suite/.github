@@ -1,4 +1,4 @@
-# Contributing to agentsec-ecosystem
+# Contributing to agentic-suite
 
 Thanks for helping make agents safer to run. This org contains many repositories, so the process
 below is the default; a repository's own `CONTRIBUTING.md` overrides it.
