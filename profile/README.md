@@ -2,10 +2,10 @@
 
 **Open-source, harness-agnostic security for AI agents.**
 
-> **Shipped:** [agentwatch](https://github.com/agentic-suite/agentwatch) **v0.2.0** — the vendor-neutral
+> **Shipped:** [agentwatch](https://github.com/agentic-suite/agentsec-agentwatch) **v0.2.0** — the vendor-neutral
 > telemetry + security-event layer (OTel GenAI records, local hash-chained store, replay, 43 detectors,
 > operator console) is released and validated at its release gate (92 PASS · 0 FAIL across 94 field-test
-> cases). See [release notes](https://github.com/agentic-suite/agentwatch/blob/main/docs/release/v0.2.0/release-notes.md).
+> cases). See [release notes](https://github.com/agentic-suite/agentsec-agentwatch/blob/main/docs/release/v0.2.0/release-notes.md).
 
 AI coding agents and MCP clients now hold shell access, filesystem access, credentials, and tool
 integrations — and today's tooling rarely lets a security team *see*, *stop*, or *undo* what an
@@ -23,18 +23,18 @@ harness the four capabilities that matter.
 
 | Tool | Role | Status |
 |---|---|---|
-| [agentwatch](https://github.com/agentic-suite/agentwatch) | OTel GenAI telemetry + security-event schema | **v0.2.0 shipped** |
-| [agentpolicy](https://github.com/agentic-suite/agentpolicy) | Cedar PDP: allow/deny/ask/rate-limit/redact | planned |
-| [agentgate](https://github.com/agentic-suite/agentgate) | MCP OAuth 2.1 authorization proxy | planned |
-| [agentkeys](https://github.com/agentic-suite/agentkeys) | Never-in-context credential broker + revocation | planned |
-| [agentseatbelt](https://github.com/agentic-suite/agentseatbelt) | Portable local enforcement, macOS-first | planned |
-| [agentkernel](https://github.com/agentic-suite/agentkernel) | Linux eBPF visibility + enforcement | planned |
-| [agenthalt](https://github.com/agentic-suite/agenthalt) | Universal kill-switch + evidence preservation | planned |
-| [policyweave](https://github.com/agentic-suite/policyweave) | One Cedar policy → every harness format | planned |
-| [agentdrill](https://github.com/agentic-suite/agentdrill) | Continuous adversarial testing — reproducible attack packs vs. deployed defenses, honest published results | planned (PRD complete) |
-| [agentcomply](https://github.com/agentic-suite/agentcomply) | SOC 2 / ISO 42001 evidence automation | planned |
-| [agentinbox](https://github.com/agentic-suite/agentinbox) | Ask-gate consumer (Slack/terminal/CI/mobile) | planned |
-| [agentdiff](https://github.com/agentic-suite/agentdiff) | Dry-run "would-have-blocked" conversion | planned |
+| [agentwatch](https://github.com/agentic-suite/agentsec-agentwatch) | OTel GenAI telemetry + security-event schema | **v0.2.0 shipped** |
+| [agentpolicy](https://github.com/agentic-suite/agentsec-agentpolicy) | Cedar PDP: allow/deny/ask/rate-limit/redact | planned |
+| [agentgate](https://github.com/agentic-suite/agentsec-agentgate) | MCP OAuth 2.1 authorization proxy | planned |
+| [agentkeys](https://github.com/agentic-suite/agentsec-agentkeys) | Never-in-context credential broker + revocation | planned |
+| [agentseatbelt](https://github.com/agentic-suite/agentsec-agentseatbelt) | Portable local enforcement, macOS-first | planned |
+| [agentkernel](https://github.com/agentic-suite/agentsec-agentkernel) | Linux eBPF visibility + enforcement | planned |
+| [agenthalt](https://github.com/agentic-suite/agentsec-agenthalt) | Universal kill-switch + evidence preservation | planned |
+| [policyweave](https://github.com/agentic-suite/agentsec-policyweave) | One Cedar policy → every harness format | planned |
+| [agentdrill](https://github.com/agentic-suite/agentsec-agentdrill) | Continuous adversarial testing — reproducible attack packs vs. deployed defenses, honest published results | planned (PRD complete) |
+| [agentcomply](https://github.com/agentic-suite/agentsec-agentcomply) | SOC 2 / ISO 42001 evidence automation | planned |
+| [agentinbox](https://github.com/agentic-suite/agentsec-agentinbox) | Ask-gate consumer (Slack/terminal/CI/mobile) | planned |
+| [agentdiff](https://github.com/agentic-suite/agentsec-agentdiff) | Dry-run "would-have-blocked" conversion | planned |
 
 > Status reflects reality. Each repo is published as it becomes usable, not before.
 
@@ -46,10 +46,10 @@ repositories.
 
 | Archived (superseded) | Replaced by |
 |---|---|
-| [mcplex](https://github.com/agentic-suite/mcplex) | [agentkeys](https://github.com/agentic-suite/agentkeys) |
-| [agent-tooltrust](https://github.com/agentic-suite/agent-tooltrust) | [agentpolicy](https://github.com/agentic-suite/agentpolicy) / [agentgate](https://github.com/agentic-suite/agentgate) |
-| [ai-loopguard](https://github.com/agentic-suite/ai-loopguard) | [agenthalt](https://github.com/agentic-suite/agenthalt) |
-| agent-eval-forge (retired; retained privately) | [agentdrill](https://github.com/agentic-suite/agentdrill) |
+| [mcplex](https://github.com/agentic-suite/mcplex) | [agentkeys](https://github.com/agentic-suite/agentsec-agentkeys) |
+| [agent-tooltrust](https://github.com/agentic-suite/agent-tooltrust) | [agentpolicy](https://github.com/agentic-suite/agentsec-agentpolicy) / [agentgate](https://github.com/agentic-suite/agentsec-agentgate) |
+| [ai-loopguard](https://github.com/agentic-suite/ai-loopguard) | [agenthalt](https://github.com/agentic-suite/agentsec-agenthalt) |
+| agent-eval-forge (retired; retained privately) | [agentdrill](https://github.com/agentic-suite/agentsec-agentdrill) |
 
 ## Principles
 
@@ -57,7 +57,7 @@ repositories.
 - **Adopt, don't rebuild** — we build on existing OSS (LiteLLM, agent-scan, sandbox-runtime, Cedar, eBPF tooling).
 - **No ML in enforcement paths** — deterministic, auditable policy decisions.
 - **No paywalled enforcement, no proprietary formats** — Apache-2.0, open schema, portable policy.
-- **Honest results** — [agentdrill](https://github.com/agentic-suite/agentdrill) publishes a public,
+- **Honest results** — [agentdrill](https://github.com/agentic-suite/agentsec-agentdrill) publishes a public,
   reproducible benchmark against the deployed stack, including what we miss.
 
 ## Get started

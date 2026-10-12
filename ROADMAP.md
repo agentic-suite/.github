@@ -1,6 +1,6 @@
 # Roadmap
 
-> **Shipped:** [agentwatch](https://github.com/agentic-suite/agentwatch) **v0.2.0** — the telemetry +
+> **Shipped:** [agentwatch](https://github.com/agentic-suite/agentsec-agentwatch) **v0.2.0** — the telemetry +
 > security-event layer is released. Wave 0's remaining tools (agentpolicy, agentkeys, agenthalt, agentdrill)
 > are in progress.
 
