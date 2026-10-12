@@ -2,10 +2,13 @@
 
 **Open-source, harness-agnostic security for AI agents.**
 
-> **Shipped:** [agentwatch](https://github.com/agentic-suite/agentsec-agentwatch) **v0.2.0** — the vendor-neutral
+> **Shipped:** [agentwatch](https://github.com/agentic-suite/agentsec-agentwatch) **v0.3.0** — the vendor-neutral
 > telemetry + security-event layer (OTel GenAI records, local hash-chained store, replay, 43 detectors,
-> operator console) is released and validated at its release gate (92 PASS · 0 FAIL across 94 field-test
-> cases). See [release notes](https://github.com/agentic-suite/agentsec-agentwatch/blob/main/docs/release/v0.2.0/release-notes.md).
+> operator console). v0.3.0 is the identity & structure release — the org, repos, package import, and CLI are
+> renamed (renames only, no code change); the v0.2.0 field test remains the latest field validation
+> (92 PASS · 0 FAIL across 94 cases). See the
+> [CHANGELOG](https://github.com/agentic-suite/agentsec-agentwatch/blob/main/CHANGELOG.md) and the
+> [v0.3.0 migration guide](https://github.com/agentic-suite/agentsec-agentwatch/blob/main/docs/release/v0.3.0/migration-guide.md).
 
 AI coding agents and MCP clients now hold shell access, filesystem access, credentials, and tool
 integrations — and today's tooling rarely lets a security team *see*, *stop*, or *undo* what an
@@ -23,7 +26,7 @@ harness the four capabilities that matter.
 
 | Tool | Role | Status |
 |---|---|---|
-| [agentwatch](https://github.com/agentic-suite/agentsec-agentwatch) | OTel GenAI telemetry + security-event schema | **v0.2.0 shipped** |
+| [agentwatch](https://github.com/agentic-suite/agentsec-agentwatch) | OTel GenAI telemetry + security-event schema | **v0.3.0 shipped** |
 | [agentpolicy](https://github.com/agentic-suite/agentsec-agentpolicy) | Cedar PDP: allow/deny/ask/rate-limit/redact | planned |
 | [agentgate](https://github.com/agentic-suite/agentsec-agentgate) | MCP OAuth 2.1 authorization proxy | planned |
 | [agentkeys](https://github.com/agentic-suite/agentsec-agentkeys) | Never-in-context credential broker + revocation | planned |
@@ -31,7 +34,7 @@ harness the four capabilities that matter.
 | [agentkernel](https://github.com/agentic-suite/agentsec-agentkernel) | Linux eBPF visibility + enforcement | planned |
 | [agenthalt](https://github.com/agentic-suite/agentsec-agenthalt) | Universal kill-switch + evidence preservation | planned |
 | [policyweave](https://github.com/agentic-suite/agentsec-policyweave) | One Cedar policy → every harness format | planned |
-| [agentdrill](https://github.com/agentic-suite/agentsec-agentdrill) | Continuous adversarial testing — reproducible attack packs vs. deployed defenses, honest published results | planned (PRD complete) |
+| [agentdrill](https://github.com/agentic-suite/agentsec-agentdrill) | Continuous adversarial testing — reproducible attack packs vs. deployed defenses, honest published results | **v0.1.0 in progress** |
 | [agentcomply](https://github.com/agentic-suite/agentsec-agentcomply) | SOC 2 / ISO 42001 evidence automation | planned |
 | [agentinbox](https://github.com/agentic-suite/agentsec-agentinbox) | Ask-gate consumer (Slack/terminal/CI/mobile) | planned |
 | [agentdiff](https://github.com/agentic-suite/agentsec-agentdiff) | Dry-run "would-have-blocked" conversion | planned |
