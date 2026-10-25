@@ -2,13 +2,19 @@
 
 **Open-source, harness-agnostic security for AI agents.**
 
-> **Shipped:** [agentwatch](https://github.com/agentic-suite/agentsec-agentwatch) **v0.3.0** — the vendor-neutral
-> telemetry + security-event layer (OTel GenAI records, local hash-chained store, replay, 43 detectors,
-> operator console). v0.3.0 is the identity & structure release — the org, repos, package import, and CLI are
-> renamed (renames only, no code change); the v0.2.0 field test remains the latest field validation
-> (92 PASS · 0 FAIL across 94 cases). See the
-> [CHANGELOG](https://github.com/agentic-suite/agentsec-agentwatch/blob/main/CHANGELOG.md) and the
-> [v0.3.0 migration guide](https://github.com/agentic-suite/agentsec-agentwatch/blob/main/docs/release/v0.3.0/migration-guide.md).
+> **Shipped:** [agentdrill](https://github.com/agentic-suite/agentsec-agentdrill) **v0.1.0** and
+> [agentwatch](https://github.com/agentic-suite/agentsec-agentwatch) **v0.3.0**.
+>
+> - **agentdrill v0.1.0** — the adversarial-testing engine: versioned attack packs run against your deployed
+>   stack in CI, with honest, published results (**misses included**). Field-tested end to end (73/73 units;
+>   19/19 agents across 8 frameworks; cross-OS parity 100%) — see the
+>   [field test report](https://github.com/agentic-suite/agentsec-agentdrill/blob/v0.1.0/docs/field-test/v0.1.0/FIELD_TEST_REPORT.md).
+> - **agentwatch v0.3.0** — the vendor-neutral telemetry + security-event layer (OTel GenAI records, local
+>   hash-chained store, replay, 43 detectors, operator console). v0.3.0 is the identity & structure release —
+>   the org, repos, package import, and CLI are renamed (renames only, no code change); the v0.2.0 field test
+>   remains the latest field validation (92 PASS · 0 FAIL across 94 cases). See the
+>   [CHANGELOG](https://github.com/agentic-suite/agentsec-agentwatch/blob/main/CHANGELOG.md) and the
+>   [v0.3.0 migration guide](https://github.com/agentic-suite/agentsec-agentwatch/blob/main/docs/release/v0.3.0/migration-guide.md).
 
 AI coding agents and MCP clients now hold shell access, filesystem access, credentials, and tool
 integrations — and today's tooling rarely lets a security team *see*, *stop*, or *undo* what an
@@ -34,7 +40,7 @@ harness the four capabilities that matter.
 | [agentkernel](https://github.com/agentic-suite/agentsec-agentkernel) | Linux eBPF visibility + enforcement | planned |
 | [agenthalt](https://github.com/agentic-suite/agentsec-agenthalt) | Universal kill-switch + evidence preservation | planned |
 | [policyweave](https://github.com/agentic-suite/agentsec-policyweave) | One Cedar policy → every harness format | planned |
-| [agentdrill](https://github.com/agentic-suite/agentsec-agentdrill) | Continuous adversarial testing — reproducible attack packs vs. deployed defenses, honest published results | **v0.1.0 in progress** |
+| [agentdrill](https://github.com/agentic-suite/agentsec-agentdrill) | Continuous adversarial testing — reproducible attack packs vs. deployed defenses, honest published results | **v0.1.0 shipped** |
 | [agentcomply](https://github.com/agentic-suite/agentsec-agentcomply) | SOC 2 / ISO 42001 evidence automation | planned |
 | [agentinbox](https://github.com/agentic-suite/agentsec-agentinbox) | Ask-gate consumer (Slack/terminal/CI/mobile) | planned |
 | [agentdiff](https://github.com/agentic-suite/agentsec-agentdiff) | Dry-run "would-have-blocked" conversion | planned |
@@ -61,7 +67,8 @@ repositories.
 - **No ML in enforcement paths** — deterministic, auditable policy decisions.
 - **No paywalled enforcement, no proprietary formats** — Apache-2.0, open schema, portable policy.
 - **Honest results** — [agentdrill](https://github.com/agentic-suite/agentsec-agentdrill) publishes a public,
-  reproducible benchmark against the deployed stack, including what we miss.
+  reproducible benchmark against the deployed stack, including what we miss (v0.1.0: 73/73 field units, every
+  pass grounded).
 
 ## Get started
 
