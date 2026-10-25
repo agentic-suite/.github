@@ -72,7 +72,14 @@ repositories.
 
 ## Get started
 
-One command installs the Wave 0 stack for Claude Code — recording first, monitor-only by default:
+**Install a shipped tool:**
+
+```sh
+pip install agentsec-agentdrill     # adversarial testing — then: agentdrill quickstart
+pip install agentsec-agentwatch     # telemetry + security events
+```
+
+**One command installs the Wave 0 stack for Claude Code** — recording first, monitor-only by default:
 
 ```sh
 npx @agentic-suite/cli init
@@ -82,8 +89,8 @@ It installs the Claude Code hooks and a local daemon, records every tool call (a
 by default), and enforces nothing until you opt in. `agentsec init --enforce` turns on the policy
 gates.
 
-> **Status: not yet available.** The CLI ships with Wave 0. This is the intended UX, published
-> early so we can be held to it.
+> **Status:** the two tools above are **installable today**; the one-command CLI **ships with Wave 0
+> and is not yet published**. This is the intended UX, published early so we can be held to it.
 
 ## Get involved
 
