@@ -63,7 +63,7 @@ repositories.
 | Archived (superseded) | Replaced by |
 |---|---|
 | [mcplex](https://github.com/agentic-suite/mcplex) | [agentkeys](https://github.com/agentic-suite/agentsec-agentkeys) |
-| [agent-tooltrust](https://github.com/agentic-suite/agent-tooltrust) | [agentpolicy](https://github.com/agentic-suite/agentsec-agentpolicy) / [agentgate](https://github.com/agentic-suite/agentsec-agentgate) |
+| [agent-tooltrust](https://github.com/agentic-suite/agent-tooltrust) | [agentgate](https://github.com/agentic-suite/agentsec-agentgate) |
 | [ai-loopguard](https://github.com/agentic-suite/ai-loopguard) | [agenthalt](https://github.com/agentic-suite/agentsec-agenthalt) |
 | agent-eval-forge (retired; retained privately) | [agentdrill](https://github.com/agentic-suite/agentsec-agentdrill) |
 
