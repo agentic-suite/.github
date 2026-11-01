@@ -1,8 +1,9 @@
 # Roadmap
 
-> **Shipped:** [agentwatch](https://github.com/agentic-suite/agentsec-agentwatch) **v0.2.0** — the telemetry +
-> security-event layer is released. Wave 0's remaining tools (agentpolicy, agentkeys, agenthalt, agentdrill)
-> are in progress.
+> **Shipped:** [agentwatch](https://github.com/agentic-suite/agentsec-agentwatch) **v0.3.0** (telemetry +
+> security-event layer), [agentdrill](https://github.com/agentic-suite/agentsec-agentdrill) **v0.1.0**
+> (adversarial testing), and [agentpolicy](https://github.com/agentic-suite/agentsec-agentpolicy) **v0.1.0**
+> (the Cedar policy decision point). Wave 0's remaining tools (agentkeys, agenthalt) are in progress.
 
 **One brand, one install.** Each wave proves exactly one headline capability — and no wave ships
 unless its tools can be demoed to a real user in under 10 minutes.
@@ -21,11 +22,11 @@ The capability order is fixed: **monitor → alert → block/limit → revoke**.
 Proves *one harness, all four capabilities, in 15 minutes* (Claude Code first, monitor-only by
 default). Shipped as **one** install, not five launches.
 
-- **agentwatch v0.2.0 ✅ shipped** — record every tool call; OpenTelemetry GenAI + the open security-event schema
-- **agentpolicy v0.1** — Cedar PDP: allow / deny / ask / rate-limit / redact
+- **agentwatch v0.3.0 ✅ shipped** — record every tool call; OpenTelemetry GenAI + the open security-event schema
+- **agentpolicy v0.1.0 ✅ shipped** — Cedar PDP: allow / deny / ask / rate-limit / redact
 - **agentkeys v0.1** — never-in-context credential broker + one-command revoke
 - **agenthalt v0.1** — halt/pause across layers + evidence snapshot
-- **agentdrill v0.1** — attack packs that gate the rest
+- **agentdrill v0.1.0 ✅ shipped** — attack packs that gate the rest
 - **One install:** `npx @agentic-suite/cli init` (monitor-only by default)
 
 **Exit gate:** all four capabilities running on Claude Code in ≤15 min, zero code changes, and the

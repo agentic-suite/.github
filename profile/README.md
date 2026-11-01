@@ -2,9 +2,16 @@
 
 **Open-source, harness-agnostic security for AI agents.**
 
-> **Shipped:** [agentdrill](https://github.com/agentic-suite/agentsec-agentdrill) **v0.1.0** and
-> [agentwatch](https://github.com/agentic-suite/agentsec-agentwatch) **v0.3.0**.
+> **Shipped:** [agentdrill](https://github.com/agentic-suite/agentsec-agentdrill) **v0.1.0**,
+> [agentwatch](https://github.com/agentic-suite/agentsec-agentwatch) **v0.3.0**, and
+> [agentpolicy](https://github.com/agentic-suite/agentsec-agentpolicy) **v0.1.0**.
 >
+> - **agentpolicy v0.1.0** — the local-first **Cedar policy decision point** (allow / deny / ask / rate-limit /
+>   redact). Deterministic, explainable, auditable, fail-closed. Shipped on PyPI
+>   (`pip install agentsec-agentpolicy`) with SBOM + SHA256SUMS + SLSA provenance; field-tested end to end
+>   (**97/97 field units PASS**, Claude Code + Codex CLI exercised live) — see the
+>   [release notes](https://github.com/agentic-suite/agentsec-agentpolicy/blob/v0.1.0/docs/reference/release-notes-v0.1.0.md)
+>   and the [field test report](https://github.com/agentic-suite/agentsec-agentpolicy/blob/v0.1.0/docs/field-test/v0.1.0/FIELD_TEST_REPORT.md).
 > - **agentdrill v0.1.0** — the adversarial-testing engine: versioned attack packs run against your deployed
 >   stack in CI, with honest, published results (**misses included**). Field-tested end to end (73/73 units;
 >   19/19 agents across 8 frameworks; cross-OS parity 100%) — see the
@@ -33,7 +40,7 @@ harness the four capabilities that matter.
 | Tool | Role | Status |
 |---|---|---|
 | [agentwatch](https://github.com/agentic-suite/agentsec-agentwatch) | OTel GenAI telemetry + security-event schema | **v0.3.0 shipped** |
-| [agentpolicy](https://github.com/agentic-suite/agentsec-agentpolicy) | Cedar PDP: allow/deny/ask/rate-limit/redact | planned |
+| [agentpolicy](https://github.com/agentic-suite/agentsec-agentpolicy) | Cedar PDP: allow/deny/ask/rate-limit/redact | **v0.1.0 shipped** |
 | [agentgate](https://github.com/agentic-suite/agentsec-agentgate) | MCP OAuth 2.1 authorization proxy | planned |
 | [agentkeys](https://github.com/agentic-suite/agentsec-agentkeys) | Never-in-context credential broker + revocation | planned |
 | [agentseatbelt](https://github.com/agentic-suite/agentsec-agentseatbelt) | Portable local enforcement, macOS-first | planned |
@@ -56,7 +63,7 @@ repositories.
 | Archived (superseded) | Replaced by |
 |---|---|
 | [mcplex](https://github.com/agentic-suite/mcplex) | [agentkeys](https://github.com/agentic-suite/agentsec-agentkeys) |
-| [agent-tooltrust](https://github.com/agentic-suite/agent-tooltrust) | [agentpolicy](https://github.com/agentic-suite/agentsec-agentpolicy) / [agentgate](https://github.com/agentic-suite/agentsec-agentgate) |
+| [agent-tooltrust](https://github.com/agentic-suite/agent-tooltrust) | [agentgate](https://github.com/agentic-suite/agentsec-agentgate) |
 | [ai-loopguard](https://github.com/agentic-suite/ai-loopguard) | [agenthalt](https://github.com/agentic-suite/agentsec-agenthalt) |
 | agent-eval-forge (retired; retained privately) | [agentdrill](https://github.com/agentic-suite/agentsec-agentdrill) |
 
@@ -75,6 +82,7 @@ repositories.
 **Install a shipped tool:**
 
 ```sh
+pip install agentsec-agentpolicy    # policy decision point — then: agentpolicy init
 pip install agentsec-agentdrill     # adversarial testing — then: agentdrill quickstart
 pip install agentsec-agentwatch     # telemetry + security events
 ```
@@ -89,7 +97,7 @@ It installs the Claude Code hooks and a local daemon, records every tool call (a
 by default), and enforces nothing until you opt in. `agentsec init --enforce` turns on the policy
 gates.
 
-> **Status:** the two tools above are **installable today**; the one-command CLI **ships with Wave 0
+> **Status:** the three tools above are **installable today**; the one-command CLI **ships with Wave 0
 > and is not yet published**. This is the intended UX, published early so we can be held to it.
 
 ## Get involved
