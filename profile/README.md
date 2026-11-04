@@ -49,7 +49,7 @@ harness the four capabilities that matter.
 | [policyweave](https://github.com/agentic-suite/agentsec-policyweave) | One Cedar policy → every harness format | planned |
 | [agentdrill](https://github.com/agentic-suite/agentsec-agentdrill) | Continuous adversarial testing — reproducible attack packs vs. deployed defenses, honest published results | **v0.1.0 shipped** |
 | [agentcomply](https://github.com/agentic-suite/agentsec-agentcomply) | SOC 2 / ISO 42001 evidence automation | planned |
-| [agentinbox](https://github.com/agentic-suite/agentsec-agentinbox) | Ask-gate consumer (Slack/terminal/CI/mobile) | planned |
+| [agentinbox](https://github.com/agentic-suite/agentsec-agentinbox) | Ask-gate consumer — the approval control plane for consequential agent actions (terminal/desktop/CI/webhook; no chat platform required) | **planned** — PRD 00–30 + v0.1.0 WBS (26 milestones) published |
 | [agentdiff](https://github.com/agentic-suite/agentsec-agentdiff) | Dry-run "would-have-blocked" conversion | planned |
 
 > Status reflects reality. Each repo is published as it becomes usable, not before.
