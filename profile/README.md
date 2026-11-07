@@ -3,8 +3,18 @@
 **Open-source, harness-agnostic security for AI agents.**
 
 > **Shipped:** [agentdrill](https://github.com/agentic-suite/agentsec-agentdrill) **v0.1.0**,
-> [agentwatch](https://github.com/agentic-suite/agentsec-agentwatch) **v0.3.0**, and
-> [agentpolicy](https://github.com/agentic-suite/agentsec-agentpolicy) **v0.1.0**.
+> [agentwatch](https://github.com/agentic-suite/agentsec-agentwatch) **v0.3.0**,
+> [agentpolicy](https://github.com/agentic-suite/agentsec-agentpolicy) **v0.1.0**, and
+> [agentinbox](https://github.com/agentic-suite/agentsec-agentinbox) **v0.1.0**.
+>
+> - **agentinbox v0.1.0** — the **approval control plane** for consequential agent actions: decision-ready
+>   cards, terminal / desktop / CI / signed-webhook answers (no chat platform required), timeout = deny,
+>   escalation, flood protection, and hash-chained evidence. Shipped on PyPI
+>   (`pip install agentsec-agentinbox`) with SBOM + SHA256SUMS; field-tested end to end
+>   (**47 PASS / 6 FAIL** — 4 known container test-setup/env issues + 2 study cases by design; one product
+>   defect found, fixed, and field-verified) — see the
+>   [release notes](https://github.com/agentic-suite/agentsec-agentinbox/blob/v0.1.0/docs/release/v0.1.0/RELEASE_NOTES.md)
+>   and the [field test report](https://github.com/agentic-suite/agentsec-agentinbox/blob/v0.1.0/docs/field-test/v0.1.0/FIELD_TEST_REPORT.md).
 >
 > - **agentpolicy v0.1.0** — the local-first **Cedar policy decision point** (allow / deny / ask / rate-limit /
 >   redact). Deterministic, explainable, auditable, fail-closed. Shipped on PyPI
@@ -49,7 +59,7 @@ harness the four capabilities that matter.
 | [policyweave](https://github.com/agentic-suite/agentsec-policyweave) | One Cedar policy → every harness format | planned |
 | [agentdrill](https://github.com/agentic-suite/agentsec-agentdrill) | Continuous adversarial testing — reproducible attack packs vs. deployed defenses, honest published results | **v0.1.0 shipped** |
 | [agentcomply](https://github.com/agentic-suite/agentsec-agentcomply) | SOC 2 / ISO 42001 evidence automation | planned |
-| [agentinbox](https://github.com/agentic-suite/agentsec-agentinbox) | Ask-gate consumer — the approval control plane for consequential agent actions (terminal/desktop/CI/webhook; no chat platform required) | **planned** — PRD 00–30 + v0.1.0 WBS (26 milestones) published |
+| [agentinbox](https://github.com/agentic-suite/agentsec-agentinbox) | Ask-gate consumer — the approval control plane for consequential agent actions (terminal/desktop/CI/webhook; no chat platform required) | **v0.1.0 shipped** |
 | [agentdiff](https://github.com/agentic-suite/agentsec-agentdiff) | Dry-run "would-have-blocked" conversion | planned |
 
 > Status reflects reality. Each repo is published as it becomes usable, not before.
@@ -83,6 +93,7 @@ repositories.
 
 ```sh
 pip install agentsec-agentpolicy    # policy decision point — then: agentpolicy init
+pip install agentsec-agentinbox     # approval control plane — then: agentinbox init
 pip install agentsec-agentdrill     # adversarial testing — then: agentdrill quickstart
 pip install agentsec-agentwatch     # telemetry + security events
 ```

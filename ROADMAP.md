@@ -27,10 +27,11 @@ default). Shipped as **one** install, not five launches.
 - **agentkeys v0.1** — never-in-context credential broker + one-command revoke
 - **agenthalt v0.1** — halt/pause across layers + evidence snapshot
 - **agentdrill v0.1.0 ✅ shipped** — attack packs that gate the rest
-- **agentinbox v0.1.0 — planned** — the human half of every ask-gate: decision-ready cards, terminal /
+- **agentinbox v0.1.0 ✅ shipped** — the human half of every ask-gate: decision-ready cards, terminal /
   desktop / CI / signed-webhook answers (no chat platform required), timeout = deny, escalation, flood
-  protection, hash-chained evidence. **PRD 00–30 + the v0.1.0 WBS (26 milestones) are published**; code has
-  not started. Ships inside the Wave 0 window but is **not** part of the five-tool meta-MVP claim.
+  protection, hash-chained evidence. Published on PyPI (`pip install agentsec-agentinbox`), tagged
+  `v0.1.0`, with a published field-test report (47 PASS / 6 FAIL — 4 known container test-setup/env
+  issues + 2 study cases by design), security audit, and generated compatibility matrix.
 - **One install:** `npx @agentic-suite/cli init` (monitor-only by default)
 
 **Exit gate:** all four capabilities running on Claude Code in ≤15 min, zero code changes, and the
