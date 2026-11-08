@@ -32,6 +32,19 @@
 >   remains the latest field validation (92 PASS · 0 FAIL across 94 cases). See the
 >   [CHANGELOG](https://github.com/agentic-suite/agentsec-agentwatch/blob/main/CHANGELOG.md) and the
 >   [v0.3.0 migration guide](https://github.com/agentic-suite/agentsec-agentwatch/blob/main/docs/release/v0.3.0/migration-guide.md).
+>
+> **Next: [agentkeys](https://github.com/agentic-suite/agentsec-agentkeys) — v0.1.0 *planned*.** The
+> never-in-context credential broker: agents hold opaque references, real secrets stay in your
+> keychain / credential files / vault, short-lived audience-bound tool-scoped tokens are injected **at
+> egress**, and `agentkeys revoke` kills all of an agent's access in **≤1s** (replay-verified in CI). It
+> closes the two rows in the coverage map that **nobody** owns — **unified revocation** and **stdio MCP
+> credential handling** — because the MCP spec still tells local servers to read credentials from the
+> environment. The plan of record is public and unpublished code is not claimed done: the
+> [PRD set](https://github.com/agentic-suite/agentsec-agentkeys/blob/main/docs/prd/README.md) (00–23 +
+> Appendix A, with the source PRD retained verbatim) and the
+> [v0.1.0 WBS](https://github.com/agentic-suite/agentsec-agentkeys/blob/main/docs/wbs/v0.1.0/wbs-v0.1.0-index.md)
+> (16 milestones M0–M15 — two per file — ending in field tests and release readiness, whose gate includes a
+> `trufflehog` + git-history secret-leakage audit).
 
 AI coding agents and MCP clients now hold shell access, filesystem access, credentials, and tool
 integrations — and today's tooling rarely lets a security team *see*, *stop*, or *undo* what an
@@ -52,7 +65,7 @@ harness the four capabilities that matter.
 | [agentwatch](https://github.com/agentic-suite/agentsec-agentwatch) | OTel GenAI telemetry + security-event schema | **v0.3.0 shipped** |
 | [agentpolicy](https://github.com/agentic-suite/agentsec-agentpolicy) | Cedar PDP: allow/deny/ask/rate-limit/redact | **v0.1.0 shipped** |
 | [agentgate](https://github.com/agentic-suite/agentsec-agentgate) | MCP OAuth 2.1 authorization proxy | planned |
-| [agentkeys](https://github.com/agentic-suite/agentsec-agentkeys) | Never-in-context credential broker + revocation | planned |
+| [agentkeys](https://github.com/agentic-suite/agentsec-agentkeys) | Never-in-context credential broker + revocation (refs → egress-bound tokens; `revoke` ≤1s; stdio MCP virtualization) | **v0.1.0 planned** — [PRD](https://github.com/agentic-suite/agentsec-agentkeys/blob/main/docs/prd/README.md) · [WBS](https://github.com/agentic-suite/agentsec-agentkeys/blob/main/docs/wbs/v0.1.0/wbs-v0.1.0-index.md) |
 | [agentseatbelt](https://github.com/agentic-suite/agentsec-agentseatbelt) | Portable local enforcement, macOS-first | planned |
 | [agentkernel](https://github.com/agentic-suite/agentsec-agentkernel) | Linux eBPF visibility + enforcement | planned |
 | [agenthalt](https://github.com/agentic-suite/agentsec-agenthalt) | Universal kill-switch + evidence preservation | planned |
