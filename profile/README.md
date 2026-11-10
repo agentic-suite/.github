@@ -70,7 +70,7 @@ harness the four capabilities that matter.
 | [agentwatch](https://github.com/agentic-suite/agentsec-agentwatch) | OTel GenAI telemetry + security-event schema | **v0.3.0 shipped** |
 | [agentpolicy](https://github.com/agentic-suite/agentsec-agentpolicy) | Cedar PDP: allow/deny/ask/rate-limit/redact | **v0.1.0 shipped** |
 | [agentgate](https://github.com/agentic-suite/agentsec-agentgate) | MCP OAuth 2.1 authorization proxy | planned |
-| [agentkeys](https://github.com/agentic-suite/agentsec-agentkeys) | Never-in-context credential broker + revocation (refs → egress-bound tokens; `revoke` ≤1s; stdio MCP virtualization) | **v0.1.0 planned** — [PRD](https://github.com/agentic-suite/agentsec-agentkeys/blob/main/docs/prd/README.md) · [WBS](https://github.com/agentic-suite/agentsec-agentkeys/blob/main/docs/wbs/v0.1.0/wbs-v0.1.0-index.md) |
+| [agentkeys](https://github.com/agentic-suite/agentsec-agentkeys) | Never-in-context credential broker + revocation (refs → egress-bound tokens; `revoke` ≤1s; stdio MCP virtualization) | **v0.1.0 shipped** — [PyPI](https://pypi.org/project/agentsec-agentkeys/0.1.0/) · [release notes](https://github.com/agentic-suite/agentsec-agentkeys/blob/v0.1.0/docs/release/v0.1.0/RELEASE_NOTES.md) · unsigned |
 | [agentseatbelt](https://github.com/agentic-suite/agentsec-agentseatbelt) | Portable local enforcement, macOS-first | planned |
 | [agentkernel](https://github.com/agentic-suite/agentsec-agentkernel) | Linux eBPF visibility + enforcement | planned |
 | [agenthalt](https://github.com/agentic-suite/agentsec-agenthalt) | Universal kill-switch + evidence preservation | planned |
