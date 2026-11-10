@@ -4,8 +4,9 @@
 
 > **Shipped:** [agentdrill](https://github.com/agentic-suite/agentsec-agentdrill) **v0.1.0**,
 > [agentwatch](https://github.com/agentic-suite/agentsec-agentwatch) **v0.3.0**,
-> [agentpolicy](https://github.com/agentic-suite/agentsec-agentpolicy) **v0.1.0**, and
-> [agentinbox](https://github.com/agentic-suite/agentsec-agentinbox) **v0.1.0**.
+> [agentpolicy](https://github.com/agentic-suite/agentsec-agentpolicy) **v0.1.0**,
+> [agentinbox](https://github.com/agentic-suite/agentsec-agentinbox) **v0.1.0**, and
+> [agentkeys](https://github.com/agentic-suite/agentsec-agentkeys) **v0.1.0**.
 >
 > - **agentinbox v0.1.0** — the **approval control plane** for consequential agent actions: decision-ready
 >   cards, terminal / desktop / CI / signed-webhook answers (no chat platform required), timeout = deny,
@@ -33,19 +34,23 @@
 >   [CHANGELOG](https://github.com/agentic-suite/agentsec-agentwatch/blob/main/CHANGELOG.md) and the
 >   [v0.3.0 migration guide](https://github.com/agentic-suite/agentsec-agentwatch/blob/main/docs/release/v0.3.0/migration-guide.md).
 >
-> **Next: [agentkeys](https://github.com/agentic-suite/agentsec-agentkeys) — v0.1.0 *planned*.** The
-> never-in-context credential broker: agents hold opaque references, real secrets stay in your
-> keychain / credential files / vault, short-lived audience-bound tool-scoped tokens are injected **at
-> egress**, and `agentkeys revoke` kills all of an agent's access in **≤1s** (replay-verified in CI). It
-> closes the two rows in the coverage map that **nobody** owns — **unified revocation** and **stdio MCP
-> credential handling** — because the MCP spec still tells local servers to read credentials from the
-> environment. The plan of record is public and unpublished code is not claimed done: the
-> [PRD set](https://github.com/agentic-suite/agentsec-agentkeys/blob/main/docs/prd/README.md) (00–23 +
-> Appendix A, with the source PRD retained verbatim) and the
-> [v0.1.0 WBS](https://github.com/agentic-suite/agentsec-agentkeys/blob/main/docs/wbs/v0.1.0/wbs-v0.1.0-index.md)
-> (16 milestones M0–M15 — two per file — ending in field tests and release readiness, whose gate includes a
-> `trufflehog` + git-history secret-leakage audit).
-
+> - **agentkeys v0.1.0** — the **never-in-context credential broker**: agents hold opaque `akref:` references,
+>   real secrets stay in your keychain / credential file / vault, and short-lived, audience-/tool-/session-bound
+>   tokens are injected **only at egress** (child env, HTTP header, RFC 8693 exchange). `agentkeys revoke` kills
+>   all of an agent's access in **≤1s**, replay-verified (**p95 0.017ms · max 0.031ms** at N=100 per scope,
+>   100/100 replays refused). It closes the two coverage-map rows nobody owned — **unified revocation** and
+>   **stdio MCP credential handling** — because the MCP spec still tells local servers to read credentials from
+>   the environment. Shipped on PyPI (`pip install agentsec-agentkeys`) with an SBOM; **this release is
+>   unsigned** (no Sigstore/SLSA — stated, not hidden) and **not yet published to the trust ladder's top rung**:
+>   the ≤1s claim is *field-tested*, not *verified*, until a third party re-runs the public benchmark. Field test
+>   end to end: **71 PASS · 0 FAIL · 3 WARN** across 74 cases, all five blocking scenarios green; the three WARNs
+>   are named limitations (no naive-human fresh-box install median; Claude Code not logged in headlessly; Cursor
+>   has no headless CLI surface). See the
+>   [release notes](https://github.com/agentic-suite/agentsec-agentkeys/blob/v0.1.0/docs/release/v0.1.0/RELEASE_NOTES.md),
+>   the [field test report](https://github.com/agentic-suite/agentsec-agentkeys/blob/v0.1.0/docs/field-test/v0.1.0/FIELD_TEST_REPORT.md),
+>   the [security audit](https://github.com/agentic-suite/agentsec-agentkeys/blob/v0.1.0/docs/release/v0.1.0/SECURITY_AUDIT.md),
+>   and the [benchmark](https://github.com/agentic-suite/agentsec-agentkeys/blob/v0.1.0/bench/README.md).
+>
 AI coding agents and MCP clients now hold shell access, filesystem access, credentials, and tool
 integrations — and today's tooling rarely lets a security team *see*, *stop*, or *undo* what an
 agent does. We're building the missing layer: one coherent, Apache-2.0 ecosystem that gives any
